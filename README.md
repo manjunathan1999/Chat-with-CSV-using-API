@@ -13,12 +13,12 @@ A powerful tool that enables natural language conversations with CSV data throug
 
 1. Clone the repository:
 
-git clone https://github.com/manjunathan1999/Chat-with-CSV-using-API.git
+    git clone https://github.com/manjunathan1999/Chat-with-CSV-using-API.git
 
 
 2. Install required dependencies:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 
 3. Change configuration settings in constants.py
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 6. Run the application:
 
-uvicorn main:app --reload
+    uvicorn main:app --reload
 
 
 7. Access the API documentation at http://localhost:8000/docs
