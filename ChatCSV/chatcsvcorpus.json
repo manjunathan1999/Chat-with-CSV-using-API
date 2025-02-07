@@ -1,0 +1,4 @@
+{
+    "table1" : "SELECT * FROM <table_name>",
+    "table2" : "SELECT * FROM <table_name>"
+}

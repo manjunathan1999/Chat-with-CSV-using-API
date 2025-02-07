@@ -1,6 +1,6 @@
 # --------- Interface Export -----------#
 import json
-from interface import ChatIngestInterface, ChatQueryInterface
+from .interface import ChatIngestInterface, ChatQueryInterface
 
 # --------- CSV Export -----------#
 from sql.sqlconnector import SqlConnector
@@ -20,20 +20,29 @@ def import_csv(table: str) -> SqlConnectorInterface:
             if key == table:
                 df = sql.execute_Sql(sql_query)
                 match table:
-                    case "visits":
-                        csv_file = df.to_csv("ChatCSV/source_documents/visits.csv",index=False)
+                    case "table1":
+                        csv_file = df.to_csv("ChatCSV/source_documents/table1.csv",index=False)
+                    case "table2":
+                        csv_file = df.to_csv("ChatCSV/source_documents/table2.csv",index=False)
+                    ## Add more cases for other tables ## 
                 return csv_file
 
 
 def ingest_csv(type: str) -> ChatIngestInterface:
-    visits_ingest = CSV_ingest()
+    csv_ingest = CSV_ingest()
     match type:
-        case "visits":
-            return visits_ingest.get_vectorstores()
+        case "table1":
+            return csv_ingest.get_vectorstores()
+        case "table2":
+            return csv_ingest.get_vectorstores()
+        ## Add more cases for other tables ##
 
 
 
 def get_chatcsv_query(type: str) -> ChatQueryInterface:
     match type:
-        case "visits":
+        case "table1":
             return ChatCSV()
+        case "table2":
+            return ChatCSV()
+        ## Add more cases for other tables ##

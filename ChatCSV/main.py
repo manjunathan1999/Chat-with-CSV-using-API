@@ -3,16 +3,16 @@ from langchain.chains.conversational_retrieval.base import ConversationalRetriev
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms.ctransformers import CTransformers
 from langchain_community.vectorstores import FAISS
-from constants import csv_db
-from interface import ChatQueryInterface
+from .constants import csv_db, model_path, embeddings_model, model_type
+from .interface import ChatQueryInterface
 
 
 class ChatCSV(ChatQueryInterface):
 
     def __init__(self):
-        self.model_type = "llama"
-        self.model_path = "C:/models/llama-2-7b-chat.ggmlv3.q4_0.bin"
-        self.embeddings_model_path = "sentence-transformers/all-mpnet-base-v2"
+        self.model_type = model_type
+        self.model_path = model_path
+        self.embeddings_model_path = embeddings_model
 
     def load_llm(self):
         """Load the LLM using the CTransformers library."""
@@ -49,5 +49,3 @@ class ChatCSV(ChatQueryInterface):
         result = qa({"question": query, "chat_history": chat_history})
         print(result)
         return result.get("answer", "No answer found.")
-
-ChatCSV().query_chat(query="Please provide the lastname of Gilberto?")

@@ -2,7 +2,7 @@ from types import EllipsisType
 import pyodbc
 import pandas as pd
 
-from sql_interface import SqlConnectorInterface
+from .sql_interface import SqlConnectorInterface
 
 
 class SqlConnector(SqlConnectorInterface):
