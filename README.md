@@ -11,34 +11,26 @@ A powerful tool that enables natural language conversations with CSV data throug
 
 ## Getting Started
 
-1. Clone the repository:
+## Clone the repository:
 
     git clone https://github.com/manjunathan1999/Chat-with-CSV-using-API.git
 
 
-2. Install required dependencies:
+## Install required dependencies:
 
     pip install -r requirements.txt
 
 
-3. Change configuration settings in constants.py
-
-
-4. Add the table name which you want to query in the chatcsvcourpus.py file
-
-
-5. Add the username and password and db_url in the sql/sqlconnector.py file
-
-
-6. Run the application:
+## Setup Configuration
+1. Change configuration settings in constants.py
+2. Add the table name which you want to query in the chatcsvcourpus.py file
+3. Add the username and password and db_url in the sql/sqlconnector.py file
+4. Run the application:
 
     uvicorn main:app --reload
 
-
-7. Access the API documentation at http://localhost:8000/docs
-
-
-8. Use the API endpoints to interact with CSV data
+5. Access the API documentation at http://localhost:8000/docs
+6. Use the API endpoints to interact with CSV data
 
 
 ## Usage ##
