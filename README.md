@@ -45,6 +45,6 @@ A powerful tool that enables natural language conversations with CSV data throug
 
 ## Future Enhancements ##
 
-1. Improve the chat interface for better user experience
-2. Implement user authentication and authorization
-3. Enhance error handling and logging
+1.  Implement user authentication and authorization for secure data access ✅
+2.  Improve the chat interface for better user experience
+3.  Enhance error handling and logging
